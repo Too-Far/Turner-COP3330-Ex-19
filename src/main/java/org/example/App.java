@@ -36,9 +36,9 @@ public class App
                 System.out.println("Please enter your weight: ");
                 weight = Float.parseFloat(reader.readLine());
                 break;
-            } catch (InputMismatchException e)
+            } catch (NumberFormatException e)
             {
-                //
+                System.out.println("Please enter a number");
             }
         }
 
@@ -47,8 +47,8 @@ public class App
                 System.out.println("Please enter your height in inches: ");
                 height = Float.parseFloat(reader.readLine());
                 break;
-            } catch (InputMismatchException e) {
-                //
+            } catch (NumberFormatException e) {
+                System.out.println("Please enter a number");
             }
         }
         performCalc(height, weight);
